@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MaterialNote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material Note</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <%# ログインしているときは以下を表示するようにしましょう %>
+          <%# if user_signed_in? %>
+          <!--
+            <div class="nav__right">
+              <%#= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+              <%# if current_user.id = 1 %>
+              <%#= link_to "New Content", new_prototype_path, class: :nav__btn %>
+              <%# end %>
+            </div>
+          <%# // ログインしているときは上記を表示するようにしましょう %>
+          <%# ログインしていないときは以下を表示するようにしましょう %>
+          <%# else %>
+          -->
+            <div class="nav__right">
+              <%#= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+              <%#= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+            </div>
+          <%# end %>
+          <%# // ログインしていないときは上記を表示するようにしましょう %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer class="footer">
+      <p class="copyright">Copyright © MATERIAL NOTE All rights reserved.</p>
+      <%#= link_to "利用規約", new_prototype_path, class: :rules %>
+    </footer>
   </body>
 </html>
