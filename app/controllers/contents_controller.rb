@@ -9,9 +9,10 @@ class ContentsController < ApplicationController
   end
 
   def create
+    #binding.pry
     @content = Content.new(content_params)
-    if @content.save
-      reedirect_to root_path
+    if @content.save!
+      redirect_to root_path
     else
       render :new
     end
@@ -19,7 +20,7 @@ class ContentsController < ApplicationController
 
   private
   def content_params
-    params.require(:content).permit(:title, :introduction, :image).merge(user_id: current_user.id)
+    params.require(:content).permit(:title, :introduction, :image)
   end
   
 end

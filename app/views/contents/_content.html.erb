@@ -1,5 +1,5 @@
 <div class="card">
-  <%= link_to image_tag(prototype.image, class: :card__img) , prototype_path(prototype.id)%>
+  <%= link_to image_tag(content.image, class: :card__img) , content_path(content.id)%>
   <div class="card__title">
     <%= link_to content.title, content_path(content.id), class: :card__title%>
     <p class="card__introduction">
