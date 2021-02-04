@@ -15,11 +15,11 @@
 
   <div class="secret_btn">
     <% if user_signed_in? && current_user.id = 1 %>
-    <%= link_to "お知らせの投稿", new_content_path, class: :secret_btn %>
-    <%= link_to "illustの追加", new_illust_path, class: :secret_btn %>
-    <%= link_to "comicの追加", new_comic_path, class: :secret_btn %>
-    <%= link_to "piyocomicの追加", new_piyocomic_path, class: :secret_btn %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :secret_btn %>
+    <%= link_to "お知らせの投稿", new_content_path, class: :secre_btn %>
+    <%= link_to "illustの追加", new_illust_path, class: :secre_btn %>
+    <%= link_to "comicの追加", new_comic_path, class: :secre_btn %>
+    <%= link_to "piyocomicの追加", new_piyocomic_path, class: :secre_btn %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :secre_btn %>
     <% else %>
     <%= link_to "管理者ページ", new_user_session_path, class: :secret_btn %>
     <%#= link_to "新規登録", new_user_registration_path, class: :secret_btn %>
