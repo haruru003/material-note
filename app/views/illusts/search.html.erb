@@ -1,0 +1,16 @@
+
+<div class="search_content">
+  <%= form_with(url: search_illusts_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+</div>
+
+
+<div class="contents row">
+  <% @illusts.each do |illust| %>
+    <%= render partial: "illust", locals: { illust: illust } %>
+  <% end %>
+</div>
+
+<%= render "shared/footer" %>

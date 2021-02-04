@@ -1,6 +1,6 @@
-class CreateContents < ActiveRecord::Migration[6.0]
+class CreatePiyocomics < ActiveRecord::Migration[6.0]
   def change
-    create_table :contents do |t|
+    create_table :piyocomics do |t|
       t.string :title
       t.text :introduction
       t.references :user, foreign_key: true

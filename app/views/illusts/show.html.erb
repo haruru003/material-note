@@ -1,0 +1,24 @@
+<%= render "shared/header" %>
+
+<div class="illusts">
+<div class="show">
+  <div class="show_title">
+  <%= @illust.title %>
+  </div>
+  <%= image_tag @illust.image, class:"image" %>
+  <%= @illust.introduction %>
+</div>
+
+<% if user_signed_in? && current_user.id == 1 %>
+  <div class="prototype__manage">
+    <%= link_to "編集する", edit_illust_path(@illust.id), class: :prototype__btn %>
+    <%= link_to "削除する", illust_path(@illust.id), class: :prototype__btn, method: :delete %>    
+  </div>
+<% end %>
+
+<div class="show_ic_btn">
+<%= link_to "イラスト一覧に戻る", '/illusts', class: :illust_index_btn %>
+</div>
+
+</div>
+<%= render "shared/footer" %>

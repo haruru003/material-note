@@ -1,0 +1,30 @@
+<%# CSS・・・assets/stylesheets/shared/header.css %>
+<header class="header">
+  
+
+
+
+
+  <div class="app_title"> 作品倉庫劇場</div>
+  <div class="nav_btn">
+  <%= link_to "top pageに戻る", root_path, class: :header_btn%>
+    <%= link_to "イラストを探す", '/illusts', class: :header_btn %>
+    <%= link_to "まんがを読む", '/comics', class: :header_btn %>
+  </div>
+  </div>
+
+  <div class="secret_btn">
+    <% if user_signed_in? && current_user.id = 1 %>
+    <%= link_to "お知らせの投稿", new_content_path, class: :secret_btn %>
+    <%= link_to "illustの追加", new_illust_path, class: :secret_btn %>
+    <%= link_to "comicの追加", new_comic_path, class: :secret_btn %>
+    <%= link_to "piyocomicの追加", new_piyocomic_path, class: :secret_btn %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :secret_btn %>
+    <% else %>
+    <%= link_to "管理者ページ", new_user_session_path, class: :secret_btn %>
+    <%= link_to "新規登録", new_user_registration_path, class: :secret_btn %>
+    <% end %>
+  </div> 
+  
+</header>
+

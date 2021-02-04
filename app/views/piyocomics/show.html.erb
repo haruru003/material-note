@@ -1,0 +1,19 @@
+<%#= render "shared/header" %>
+
+<div class="show">
+  <div class="show_title">
+  <%= @piyocomic.title %>
+  </div>
+  <%= image_tag @piyocomic.image, class:"image" %>
+  <%= @piyocomic.introduction %>
+</div>
+
+<% if user_signed_in? && current_user.id == 1 %>
+  <div class="prototype__manage">
+    <%= link_to "編集する", edit_piyocomic_path(@piyocomic.id), class: :prototype__btn %>
+    <%= link_to "削除する", piyocomic_path(@piyocomic.id), class: :prototype__btn, method: :delete %>    
+  </div>
+<% end %>
+
+<%= link_to "piyo漫画一覧に戻る", '/piyocomics', class: :nav__btn %>
+<%= render "shared/footer" %>

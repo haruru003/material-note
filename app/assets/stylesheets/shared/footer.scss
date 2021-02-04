@@ -1,0 +1,38 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.footer{
+  width: 100%;
+  height: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(207, 240, 253);
+}
+
+.top_page_btn {
+  margin-right: 10%;
+  text-decoration: none;
+  color: rgb(88, 88, 88);
+  padding-top: 2%;
+}
+
+.rule_btn {
+  text-decoration: none;
+  color: rgb(94, 92, 92);
+  padding-top: 2%;
+}

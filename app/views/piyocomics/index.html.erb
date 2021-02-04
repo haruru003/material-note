@@ -1,0 +1,17 @@
+<%#= render "shared/header" %>
+
+<div class="comic_index">
+  <div class="comic_list">話数一覧
+    <p>
+      話数・タイトルをクリックで詳細の閲覧ができます。
+    </p>
+  </div>
+
+  <div class="card_wrapper">
+    <%= render partial: "piyocomic", collection: @piyocomics %>
+  </div>
+ 
+</div>
+
+
+<%= render "shared/footer" %>

@@ -1,8 +1,23 @@
-<div class="contents row">
+<%= render "shared/header" %>
 
-<%= link_to "イラストを探す", '/illusts', class: :nav__btn %>
-<%= link_to "ひとくち漫画を読む", '/comics', class: :nav__btn %>
-<%= link_to "hiyoko漫画を読む", '/piyocomics', class: :nav__btn %>
+  
 
-  <%#= render partial: "content", collection: @contents %>
+  <div class="info_index">
+    <h2>お知らせ</h2>
+    <%= render partial: "content", collection: @contents %>
+  </div>
+<div class="title">
+  <%= link_to image_tag("top_page.jpg", class:"title_pic") %>
 </div>
+
+<%#= link_to image_tag("top_page_btn.png", class: :top_page_btn), root_path%>
+
+<%#= link_to image_tag("comi_btn.JPG", class: :comic_btn), '/comics'%>
+<%#= link_to image_tag("piyo_btn.JPG", class: :piyo_btn), '/piyocomics'%>
+
+<div class="sns_link">
+  <a href="https://www.google.com/">公式Twitterはこちら</a>
+  <a href="https://www.google.com/">Youtubeチャンネルはこちら</a>
+</div>
+
+<%= render "shared/footer" %>

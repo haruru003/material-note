@@ -1,0 +1,19 @@
+<%= render "shared/header" %>
+<div class="info_show">
+  <div class="info_show_title">
+    <%= @content.title%>
+  </div>
+  <div class="info_show_intro">
+    <%= @content.introduction%>
+  </div>
+</div>
+
+<% if user_signed_in? && current_user.id == 1 %>
+  <div class="prototype__manage">
+    <%= link_to "編集する", edit_content_path(@content.id), class: :prototype__btn %>
+    <%= link_to "削除する", content_path(@content.id), class: :prototype__btn, method: :delete %>    
+  </div>
+<% end %>
+
+
+<%= render "shared/footer" %>

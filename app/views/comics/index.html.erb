@@ -1,0 +1,18 @@
+<%= render "shared/header" %>
+
+
+<div class="comic_index">
+  <h1 class="comic_list">まんが一覧
+    <p>
+      話数・タイトルをクリックで詳細の閲覧ができます。
+    </p>
+  </h1>
+
+  <div class="card_wrapper">
+    <%= render partial: "comic", collection: @comics %>
+  </div>
+ 
+</div>
+
+
+<%= render "shared/footer" %>

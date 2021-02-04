@@ -1,6 +1,6 @@
-class CreateContents < ActiveRecord::Migration[6.0]
+class CreateIllusts < ActiveRecord::Migration[6.0]
   def change
-    create_table :contents do |t|
+    create_table :illusts do |t|
       t.string :title
       t.text :introduction
       t.references :user, foreign_key: true
