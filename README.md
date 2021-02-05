@@ -34,6 +34,7 @@ Things you may want to cover:
 
 
 * illusts table
+
 | column       | type       | option                        |
 | ------------ | ---------- | ----------------------------- |
 | title        | string     | null:false                    |
@@ -44,6 +45,7 @@ Things you may want to cover:
 
 
 * comics table
+
 | column       | type       | option                        |
 | ------------ | ---------- | ----------------------------- |
 | title        | string     | null:false                    |
@@ -52,17 +54,9 @@ Things you may want to cover:
 
 - belongs_to :user
 
-
-* piyocomics
-| column       | type       | option                        |
-| ------------ | ---------- | ----------------------------- |
-| title        | string     | null:false                    |
-| introduction | text       | null:false                    |
-| user         | references | null:false, foreign_key: true |
-
-- belongs_to :user
 
 * users
+
 | column       | type   | option      |
 | ------------ | ------ | ----------- |
 | title        | string | null:false  |
@@ -71,4 +65,3 @@ Things you may want to cover:
 - has_many :contents
 - has_many :illusts
 - has_many :comics
-- has_many :piyocomics
